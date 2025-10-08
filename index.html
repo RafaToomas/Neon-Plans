@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Pricing Matrix</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="pricing-container">
+    <div class="border-rotate"></div>
+
+    
+    <h1 class="title">Escolha o Plano Perfeito Para Você</h1>
+
+    <div class="pricing-grid">
+      <div class="card basic">
+        <h2>Básico</h2>
+        <p class="price">R$ 29<span>/mês</span></p>
+        <ul>
+          <li>✔ 5 projetos</li>
+          <li>✔ Suporte limitado</li>
+          <li>✖ Recursos Premium</li>
+        </ul>
+        <button class="btn">Assinar</button>
+      </div>
+
+      
+      <div class="card pro">
+        <h2>Pro</h2>
+        <p class="price">R$ 69<span>/mês</span></p>
+        <ul>
+          <li>✔ 20 projetos</li>
+          <li>✔ Suporte prioritário</li>
+          <li>✔ Acesso parcial ao Premium</li>
+        </ul>
+        <button class="btn">Assinar</button>
+      </div>
+
+      
+      <div class="card premium">
+        <h2>Premium</h2>
+        <p class="price">R$ 129<span>/mês</span></p>
+        <ul>
+          <li>✔ Projetos ilimitados</li>
+          <li>✔ Suporte 24/7</li>
+          <li>✔ Todos os recursos</li>
+        </ul>
+        <button class="btn">Assinar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const plan = btn.parentElement.querySelector('h2').textContent;
+        alert(`Você escolheu o plano ${plan}! 🚀`);
+      });
+    });
+  </script>
+</body>
+</html>
